@@ -1,0 +1,17 @@
+categoria,servico,descricao,valor,unidade,observacao
+Transferencias,PIX enviado,Transferencia via PIX para outras instituicoes,0.00,por transacao,Gratuito e ilimitado para pessoa fisica
+Transferencias,PIX recebido,Recebimento via PIX,0.00,por transacao,Gratuito e ilimitado
+Transferencias,TED (ate 5 por mes),Transferencia bancaria tradicional,0.00,por transacao,As 5 primeiras do mes sao gratuitas
+Transferencias,TED (a partir da 6a),Transferencia bancaria tradicional,8.90,por transacao,Aplicado a partir da 6a operacao no mes
+Transferencias,DOC,Transferencia bancaria tradicional (uso raro),9.50,por transacao,Disponivel apenas para valores acima de R$ 4.999
+Cartao de credito,Anuidade,Manutencao do cartao de credito,0.00,por ano,Gratuita para todos os clientes
+Cartao de credito,Saque internacional,Saque em dinheiro no exterior,15.00,por saque,Acrescido de IOF vigente
+Cartao de credito,Compra internacional,IOF sobre compras em moeda estrangeira,3.50,percentual,Incide sobre o valor convertido em reais
+Cartao de credito,2a via do cartao,Emissao de segunda via fisica,0.00,por emissao,Gratuita, entrega em ate 7 dias uteis
+Conta corrente,Manutencao de conta,Tarifa de manutencao mensal,0.00,por mes,Conta 100% digital e gratuita
+Conta corrente,Saque em caixa eletronico,Saque em rede compartilhada,6.50,por saque,Ate 2 saques gratuitos por mes
+Conta corrente,Extrato impresso,Emissao de extrato em agencia parceira,5.00,por emissao,Extrato digital sempre gratuito no app
+Investimentos,Taxa de custodia CDB,Custodia de titulos de renda fixa,0.00,por ano,Isento para todos os investimentos NovaPay
+Investimentos,Resgate antecipado,Resgate de CDB antes do vencimento,0.00,por operacao,Sem carencia ou multa, sujeito a rentabilidade proporcional
+Emprestimo,Emprestimo pessoal,Taxa de juros ao mes,1.99,percentual,Variavel conforme analise de credito do cliente
+Emprestimo,IOF sobre emprestimo,Imposto obrigatorio sobre operacoes de credito,0.38,percentual,Cobrado uma unica vez sobre o valor contratado

@@ -1,0 +1,51 @@
+# Ambientes virtuais
+venv/
+.venv/
+env/
+ENV/
+
+# Variáveis de ambiente e credenciais
+.env
+.env.local
+*.pem
+*.key
+oci_config
+config.oci
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Bancos vetoriais / índices locais (se usar Chroma/FAISS local)
+chroma_db/
+*.index
+vectorstore/
+
+# Logs
+*.log
+logs/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Docker
+*.pid
+
+# Arquivos temporários de build
+build/
+dist/
+*.egg-info/
