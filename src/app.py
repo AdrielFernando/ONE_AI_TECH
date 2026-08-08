@@ -23,7 +23,6 @@ st.caption(
 def carregar_agente():
     return construir_agente(forcar_reindexacao=False)
 
-
 agente = carregar_agente()
 
 if "mensagens" not in st.session_state:

@@ -40,7 +40,7 @@ else:
     )
 
 LLM_MODEL = os.getenv("LLM_MODEL", "gemini-2.0-flash")
-EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "models/text-embedding-004")
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "gemini-embedding-2")
 
 # --- RAG ---
 CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "1000"))
