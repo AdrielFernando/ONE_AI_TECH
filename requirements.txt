@@ -1,0 +1,20 @@
+# --- Framework do agente / RAG ---
+langchain>=0.3.27
+langchain-community>=0.3.27
+langchain-text-splitters>=0.3.8
+langchain-google-genai>=4.0.0
+
+# --- Vector store local (troca fácil depois por OCI 23ai) ---
+chromadb==0.5.20
+
+# --- Loaders de documentos ---
+pypdf==5.1.0
+pdfplumber==0.11.4
+pandas==2.2.3
+unstructured==0.16.5
+
+# --- Interface ---
+streamlit==1.40.1
+
+# --- Utilitários ---
+python-dotenv==1.0.1
