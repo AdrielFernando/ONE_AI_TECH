@@ -25,6 +25,19 @@ load_dotenv(dotenv_path=BASE_DIR / ".env")
 # sem precisar alterar o restante do código (ingestion.py e app.py não mudam).
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
+# Fallback para produção: no Streamlit Community Cloud não existe arquivo
+# .env (ele nunca é enviado ao GitHub, por segurança). Lá, as credenciais
+# ficam nos "Secrets" da própria plataforma, acessíveis via st.secrets.
+# Este bloco tenta o .env primeiro (ambiente local) e, se não encontrar,
+# busca em st.secrets (ambiente de produção) — assim o mesmo código
+# funciona sem alterações nos dois ambientes.
+if not GOOGLE_API_KEY:
+    try:
+        import streamlit as st
+        GOOGLE_API_KEY = st.secrets.get("GOOGLE_API_KEY")
+    except Exception:
+        pass
+
 # Algumas bibliotecas do Google leem a chave diretamente de variáveis de
 # ambiente específicas (GOOGLE_API_KEY e, em versões mais novas,
 # GEMINI_API_KEY), não apenas do parâmetro passado nas classes do
@@ -35,11 +48,13 @@ if GOOGLE_API_KEY:
     os.environ["GEMINI_API_KEY"] = GOOGLE_API_KEY
 else:
     raise RuntimeError(
-        "GOOGLE_API_KEY não encontrada. Verifique se o arquivo .env existe "
-        f"em {BASE_DIR} e contém a linha GOOGLE_API_KEY=sua_chave_real."
+        "GOOGLE_API_KEY não encontrada. Localmente: verifique se o arquivo "
+        f".env existe em {BASE_DIR} e contém a linha GOOGLE_API_KEY=sua_chave_real. "
+        "Em produção (Streamlit Community Cloud): verifique se o Secret "
+        "GOOGLE_API_KEY foi configurado em App settings > Secrets."
     )
 
-LLM_MODEL = os.getenv("LLM_MODEL", "gemini-2.0-flash")
+LLM_MODEL = os.getenv("LLM_MODEL", "gemini-3.5-flash")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "gemini-embedding-2")
 
 # --- RAG ---
